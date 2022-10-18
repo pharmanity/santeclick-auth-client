@@ -1,3 +1,5 @@
+const crypto = require('crypto');
+
 const cfg = {
     port: 9090,
     get baseUrl() {
@@ -5,12 +7,13 @@ const cfg = {
     },
     get client(){
         return {
-            clientId: 'grails-client',
-            clientSecret: 'secret',
-            accessTokenUri: 'http://127.0.0.1:8080/oauth/token',
-            authorizationUri: 'http://127.0.0.1:9000/#/oauth',
+            clientId: '000000',
+            clientSecret: '999999',
+            accessTokenUri: 'http://192.168.49.2:3009/token',
+            authorizationUri: 'http://192.168.49.2:3009/authorize',
             redirectUri: this.baseUrl + this.paths.authFlowCallback,
-            scopes: ['profile snapshot']
+            scopes: ['read'],
+            state: crypto.randomBytes(16).toString('hex')
         }
     },
     paths: {
