@@ -1,10 +1,6 @@
-html
-  head
-    title Test your Oauth2 provider
-  body
-    h1 Test your Oauth2 provider
+extends layout.pug
+block content
+    h1.text-6xl.m-5 Home
+    a(href=cfg.paths.authFlowStart,class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded") Se connecter avec clicksante
 
-    h2 Your configuration
-    pre #{ JSON.stringify(cfg, null, 2) }
-
-    a(href=cfg.paths.authFlowStart) Get auth token
+    
