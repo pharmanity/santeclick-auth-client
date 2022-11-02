@@ -11,3 +11,5 @@ npm-debug.log
 key.pem
 keytmp.pem
 cert.pem
+config.maxime.js
+config.dropbox.js
